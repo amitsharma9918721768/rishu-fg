@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Love 💖</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #ffd6ec, #ffe6f0);
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .slideshow-container {
+      max-width: 700px;
+      margin: auto;
+      position: relative;
+      padding-top: 80px;
+    }
+
+    .slide {
+      display: none;
+      padding: 40px;
+      background-color: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+      text-align: center;
+      animation: fade 2s;
+    }
+
+    .slide img {
+      width: 80%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(255, 192, 203, 0.4);
+    }
+
+    .text {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #d63384;
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    .emoji {
+      font-size: 2em;
+      animation: float 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #888;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow-container">
+
+    <div class="slide">
+      <img src="images/memory1.jpg" alt="Memory 1">
+      <p class="text">The moment our eyes met... everything changed 💫 <span class="emoji">💖</span></p>
+    </div>
+
+    <div class="slide">
+      <img src="images/memory2.jpg" alt="Memory 2">
+      <p class="text">Our laughter echoes in my heart forever <span class="emoji">😂💞</span></p>
+    </div>
+
+    <div class="slide">
+      <img src="images/memory3.jpg" alt="Memory 3">
+      <p class="text">You're my sunshine on every cloudy day ☀️ <span class="emoji">🌸🌈</span></p>
+    </div>
+
+    <div class="slide">
+      <img src="images/memory4.jpg" alt="Memory 4">
+      <p class="text">Every second with you feels like magic ✨ <span class="emoji">🪄💘</span></p>
+    </div>
+
+  </div>
+
+  <div class="footer">Made with love by your favorite person 💌</div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change slide every 4 seconds
+    }
+  </script>
+
+</body>
+</html>
